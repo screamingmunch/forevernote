@@ -26,7 +26,7 @@ group :development, :test do
   gem 'pry-remote'
   gem 'pry'
   gem 'pry-rails'
-  gem 'pry-debugger'
+  # gem 'pry-debugger'
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rspec-rails'
