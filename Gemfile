@@ -18,8 +18,9 @@ gem 'typhoeus'
 gem 'gon'
 gem 'koala'
 gem 'figaro'
+gem 'thrift'
+gem 'thrift_client'
 gem 'evernote'
-gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'pry-remote'
