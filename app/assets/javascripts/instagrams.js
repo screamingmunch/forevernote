@@ -1,3 +1,5 @@
+var resultz;
+
 $(function(){
   $('body').on('click', '#instagram', function(event){
     event.preventDefault();
@@ -37,8 +39,19 @@ $(function(){
     $('.instagram').append('<img src="'+ image9 + '" alt="image1" height="300px" width="auto">');
     $('.instagram').append('<img src="'+ image10 + '" alt="image1" height="300px" width="auto">');
 
+  }).done(function(results) {
+    $('.instagram').append('<br><br><button id="submitEvernote">Create a new Journal Page.</button>');
+    resultz = results;
+
   })
 
+  $('body').on('click', '#submitEvernote', function(event) {
+
+    $.post('/evernote_create_note', resultz, function(data){
+      console.log(data);
+    });
+
+  })
 
   })
 
