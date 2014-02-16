@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 # @twitter_token = Linkedid.find_by_provider("twitter").token
 # @twitter_secret = Linkedid.find_by_provider("twitter").secret
 
-def client
+def tweet_client
   twitter_user = User.find_by_id(current_user)
   twitter_token = twitter_user.linkedids.find_by_provider('twitter').token
   twitter_secret = twitter_user.linkedids.find_by_provider('twitter').secret
@@ -17,7 +17,7 @@ def client
 end
 
 def get_all_tweets
-  @tweets = client.user_timeline
+  @tweets = tweet_client.user_timeline
 
     @mapped_tweets = @tweets.map do|tweet|
       {
