@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :provider, :uid, :name
 
   has_many :linkedids
+  has_many :journals
 
   validates :provider, presence: true
   validates :uid, presence: true
