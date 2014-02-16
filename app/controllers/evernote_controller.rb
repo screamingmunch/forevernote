@@ -12,11 +12,14 @@ class EvernoteController < ApplicationController
   end
 
   def create_notebook
+
     notebook = Evernote::EDAM::Type::Notebook.new
-    notebook.name = "Test name to be replaced by params"
+
+    notebook.name = params[:title]
     created_notebook = note_store.createNotebook(notebook)
 
 
+    render json: created_notebook, status:201
   end
 
   def create_note
