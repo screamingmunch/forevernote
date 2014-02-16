@@ -30,9 +30,23 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <%= current_user.name %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href='/home/<%=current_user.id%>'>Go to my Dashboard </a></li>
-                  <li><%= link_to "Allow Instragram Access", "/auth/instagram" %></li>
-                  <li><%= link_to "Allow EverNote Access", "/auth/evernote" %></li>
-                  <li><%= link_to "Allow Facebook Access", "/auth/facebook" %></li>
+
+
+                  <% if current_user.linkedids.where(provider:"instagram").any? %> Instagram Connected
+        <% else %> <%= link_to "Allow Instragram Access", "/auth/instagram" %>
+        <% end %>
+
+
+                  <% if current_user.linkedids.where(provider:"evernote").any? %> <li>Evernote Connected</li>
+        <% else %>  <li><%= link_to "Allow Evernote Access", "/auth/evernote" %></li>
+        <% end %>
+
+
+                  <% if current_user.linkedids.where(provider:"facebook").any? %> Facebook Connected
+        <% else %> <%= link_to "Allow Facebook Access", "/auth/facebook" %>
+        <% end %>
+
+
                   <li><%= link_to "Sign Out", signout_path %></li>
                 <%else%>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>

@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+#cbp-spmenu-s1 {
+  width: 220px;
+}
+
