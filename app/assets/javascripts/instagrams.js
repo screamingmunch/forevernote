@@ -26,30 +26,33 @@ $(function(){
     var image9 = data[8].images.standard_resolution.url;
     var image10 = data[9].images.standard_resolution.url;
 
-    $('.instagram').append('<img src="'+ image1 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image2 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image3 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image4 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image5 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image6 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image7 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image8 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image9 + '" alt="image1" height="300px" width="auto">');
-    $('.instagram').append('<img src="'+ image10 + '" alt="image1" height="300px" width="auto">');
-
-
-
-
-
-
+    $('.instagram').append('<div class="item"><img src="'+ image1 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image2 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image3 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image4 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image5 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image6 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image7 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image8 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image9 + '" alt="image1" height="300px" width="auto"></div>');
+    $('.instagram').append('<div class="item"><img src="'+ image10 + '" alt="image1" height="300px" width="auto"></div>');
 
 
   })
 
 
-
-
-
   })
+
+$('#image_container').isotope({
+  // options
+  itemSelector : '.item',
+  layoutMode : 'fitRows'
+});
+
+$('#image_container').isotope({ filter: '.my-selector' }, function( $items ) {
+  var id = this.attr('id'),
+      len = $items.length;
+  console.log( 'Isotope has filtered for ' + len + ' items in #' + id );
+});
 
 })
