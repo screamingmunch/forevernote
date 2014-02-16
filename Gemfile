@@ -22,6 +22,7 @@ gem 'figaro'
 gem 'thrift'
 gem 'thrift_client'
 gem 'evernote'
+gem 'evernote_oauth'
 
 group :development, :test do
   gem 'pry-remote'
