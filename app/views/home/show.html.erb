@@ -20,6 +20,13 @@
         <input type="text" id='notebook_name'>
         <input type= "submit" value="create">
       </form>
+      <div id="jounal_list">
+        <% if @journals %>
+          <% @journals.each do |journal| %>
+          <p><%=journal.name%> </p>
+          <%end%>
+        <%end%>
+      </div>
       <a id="evernote" href="#"><img src='/assets/Evernote.png' alt='evernote'></a>
       <a id="facebook" href="#"><img src='/assets/Facebook.png' alt='facebook'></a>
       <a id="instagram" href="#"><img src='/assets/Instagram.png' alt='instagram'></a>

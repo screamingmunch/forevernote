@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def show
+    @journals = Jounral.where(user_id:current_user.id)
   end
 end
