@@ -23,6 +23,7 @@ gem 'thrift'
 gem 'thrift_client'
 gem 'evernote'
 gem 'evernote_oauth'
+gem 'twitter'
 
 group :development, :test do
   gem 'pry-remote'
