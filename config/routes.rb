@@ -13,4 +13,6 @@ Forevernote::Application.routes.draw do
 
   match "/signout" => "sessions#destroy", :as => :signout
 
+  resources :home
+
 end
