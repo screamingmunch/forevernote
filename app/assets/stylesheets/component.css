@@ -14,7 +14,7 @@ blue: #292e33;*/
 	padding: 20px;
 	margin: 0;
 	font-weight: 300;
-	background: #0d77b6;
+	background: #202529;
 }
 
 .cbp-spmenu a {
@@ -25,11 +25,12 @@ blue: #292e33;*/
 }
 
 .cbp-spmenu a:hover {
-	background: #258ecd;
+	background: #202529;
+	color: #999;
 }
 
 .cbp-spmenu a:active {
-	background: #afdefa;
+	background: #6C9E3A;
 	color: #47a3da;
 }
 
@@ -43,7 +44,7 @@ blue: #292e33;*/
 }
 
 .cbp-spmenu-vertical a {
-	border-bottom: 1px solid #258ecd;
+	border-bottom: 1px solid #202529;
 	padding: 1em;
 }
 

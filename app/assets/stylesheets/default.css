@@ -98,7 +98,7 @@ a:hover {
 
 .container > header nav a:after {
 	content: attr(data-info);
-	color: #47a3da;
+	color: #6C9E3A;
 	position: absolute;
 	width: 600%;
 	top: 120%;
@@ -129,8 +129,8 @@ a:hover {
 
 .main > section button {
 	border: none;
-	background: #47a3da;
-	color: #fff;
+	background: #d8d8d7;
+	color: #333;
 	padding: 1.5em;
 	display: block;
 	width: 100%;
@@ -140,11 +140,11 @@ a:hover {
 }
 
 .main > section button:hover {
-	background: #258ecd;
+	background: #6C9E3A;
 }
 
 .main > section button.active {
-	background: #0d77b6;
+	background: #6C9E3A;
 }
 
 .main > section button.disabled {
