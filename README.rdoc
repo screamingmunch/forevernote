@@ -1,1 +1,8 @@
 journal..
+
+1) make sure you're running postgresql
+
+2) `rails generate figaro:install`
+
+3) put your ENV variables in config/application.yml
+

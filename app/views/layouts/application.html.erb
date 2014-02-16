@@ -7,9 +7,50 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-  <header>
-    <div>
+<body role='document'>
+  <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" id="forevergreen" role="navigation">
+      <div class="container">
+        <div class="navbar-header" id="forevergreen">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ForeverNote</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="forevergreynav nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <% if current_user %>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <%= current_user.name %> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href='#'>Dashboard </a></li>
+                  <li><%= link_to "Sign Out", signout_path %></li>
+                <%else%>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Sign in: Twitter", "/auth/twitter" %></li>
+          <!-- -->
+                <%end%>
+<!--                 <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+<!--   <div class='header'>
       <% if current_user %>
         Welcome <%= current_user.name %> !
         <%= link_to "Sign Out", signout_path %>
@@ -20,11 +61,14 @@
       <%else%>
         <%= link_to "Sign in: Twitter", "/auth/twitter" %>
       <%end%>
-    </div>
-  </header>
+  </div> -->
 
-<%= yield %>
+<div id='forevergrey'>
+  <%= yield %>
+</div>
 
-
+<div class="footer">
+  <p>&copy; ForeverNote 2014</p>
+</div>
 </body>
 </html>
