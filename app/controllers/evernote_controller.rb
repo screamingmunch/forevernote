@@ -1,14 +1,14 @@
 class EvernoteController < ApplicationController
 
-  def client
+  def ev_client
     evernote_user = User.find_by_id(current_user)
     ev_auth = evernote_user.linkedids.find_by_provider("evernote").token
-    @client = EvernoteOAuth::Client.new(token: ev_auth)
+    @ev_client = EvernoteOAuth::Client.new(token: ev_auth)
     # binding.pry
   end
 
   def note_store
-    @note_store = client.note_store
+    @note_store = ev_client.note_store
   end
 
   def create_notebook
