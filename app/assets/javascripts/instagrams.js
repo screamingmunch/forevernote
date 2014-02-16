@@ -26,8 +26,19 @@ $(function(){
     var image9 = data[8].images.standard_resolution.url;
     var image10 = data[9].images.standard_resolution.url;
 
-    console.log(image2);
-    $('.instagram').append("test");
+    $('.instagram').append('<img src="'+ image1 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image2 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image3 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image4 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image5 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image6 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image7 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image8 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image9 + '" alt="image1" height="300px" width="auto">');
+    $('.instagram').append('<img src="'+ image10 + '" alt="image1" height="300px" width="auto">');
+
+
+
 
 
 
