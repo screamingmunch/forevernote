@@ -20,8 +20,6 @@ class EvernoteController < ApplicationController
 
     new_journal = Jounral.create(user_id: current_user.id, guid:created_notebook.guid, name:created_notebook.name)
 
-    binding.pry
-
 
     render json: created_notebook, status:201
   end
@@ -40,9 +38,6 @@ class EvernoteController < ApplicationController
 
   end
 
-  def journal_list
-    @journals = Jounral.find_by_user_id(current_user.id)
-  end
 
 
 end
