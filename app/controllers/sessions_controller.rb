@@ -19,7 +19,6 @@ class SessionsController < ApplicationController
   def access
     auth = request.env["omniauth.auth"]
     user = User.find_by_id(current_user.id)
-    # binding.pry
     if Linkedid.find_by_provider_and_uid(auth.provider, auth.uid)
 
     elsif auth.credentials
