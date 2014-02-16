@@ -6,7 +6,7 @@ Forevernote::Application.routes.draw do
   match "/auth/evernote/callback" => "sessions#access"
   match "/auth/facebook/callback" => "sessions#access"
 
-  match "/test" => "evernote#create_note"
+  post "/evernote_create_notebook" => "evernote#create_notebook"
   match "/tweet" => "tweets#get_all_tweets"
   match "/instagram" => "instagrams#get_instagrams"
   match "/facebook" => "facebook#get_fb"

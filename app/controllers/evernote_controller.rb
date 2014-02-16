@@ -12,11 +12,18 @@ class EvernoteController < ApplicationController
   end
 
   def create_notebook
+
     notebook = Evernote::EDAM::Type::Notebook.new
-    notebook.name = "Test name to be replaced by params"
+
+    notebook.name = params[:title]
     created_notebook = note_store.createNotebook(notebook)
 
+    new_journal = Jounral.create(user_id: current_user.id, guid:created_notebook.guid, name:created_notebook.name)
 
+    binding.pry
+
+
+    render json: created_notebook, status:201
   end
 
   def create_note
@@ -31,6 +38,10 @@ class EvernoteController < ApplicationController
 
     note_store.createNote(note)
 
+  end
+
+  def journal_list
+    @journals = Jounral.find_by_user_id(current_user.id)
   end
 
 
