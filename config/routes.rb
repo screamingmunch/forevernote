@@ -6,6 +6,8 @@ Forevernote::Application.routes.draw do
   match "/auth/evernote/callback" => "sessions#access"
   match "/auth/facebook/callback" => "sessions#access"
 
+  match "/test" => "evernote#create_note"
+
   match "/signout" => "sessions#destroy", :as => :signout
 
 end

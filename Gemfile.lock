@@ -59,6 +59,9 @@ GEM
     evernote (1.2.1)
       thrift_client (>= 0.8.1)
     evernote-thrift (1.25.1)
+    evernote_oauth (0.2.3)
+      evernote-thrift
+      oauth (>= 0.4.1)
     execjs (2.0.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -208,6 +211,7 @@ DEPENDENCIES
   eco
   ejs
   evernote
+  evernote_oauth
   figaro
   gon
   jquery-rails
