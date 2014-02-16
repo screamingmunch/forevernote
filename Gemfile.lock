@@ -30,9 +30,6 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.5)
     arel (3.0.3)
-    better_errors (1.1.0)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
@@ -115,6 +112,9 @@ GEM
       omniauth-oauth (~> 1.0)
     omniauth-facebook (1.4.0)
       omniauth-oauth2 (~> 1.0.2)
+    omniauth-instagram (1.0.1)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -135,8 +135,6 @@ GEM
     pry-remote (0.1.8)
       pry (~> 0.9)
       slop (~> 3.0)
-    quiet_assets (1.0.2)
-      railties (>= 3.1, < 5.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -204,7 +202,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
   dotenv-rails
@@ -220,12 +217,12 @@ DEPENDENCIES
   omniauth
   omniauth-evernote (~> 1.2.0)
   omniauth-facebook (= 1.4.0)
+  omniauth-instagram
   omniauth-twitter
   pg
   pry
   pry-rails
   pry-remote
-  quiet_assets
   rails (= 3.2.14)
   rspec-rails
   sass-rails (~> 3.2.3)
