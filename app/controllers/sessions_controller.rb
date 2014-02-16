@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
 
     unless Linkedid.find_by_id(user.id)
-      linkedid = Linkedid.create(name: user.name, provider: user.provider, uid: user.uid, user_id: user.id )
+     linkedid = Linkedid.create(name: user.name, provider: auth.provider, uid: auth.uid, user_id: user.id, token:auth.credentials.token, secret: auth.credentials.secret )
     end
 
     session[:user_id] = user.id
