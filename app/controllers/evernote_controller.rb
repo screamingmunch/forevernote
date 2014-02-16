@@ -26,7 +26,7 @@ class EvernoteController < ApplicationController
 
   def create_note
     note = Evernote::EDAM::Type::Note.new
-    note.title = "Title to be Replaced by a new title from params"
+    note.title = " "
     note.notebookGuid ="16738da5-8c55-4a07-8d31-7e4d3c1a78a0"
     note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
   '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
