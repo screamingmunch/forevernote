@@ -8,6 +8,8 @@ Forevernote::Application.routes.draw do
 
   match "/test" => "evernote#create_note"
   match "/tweet" => "tweets#get_all_tweets"
+  match "/instagram" => "instagrams#get_instagrams"
+
 
   match "/signout" => "sessions#destroy", :as => :signout
 
