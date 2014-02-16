@@ -7,11 +7,18 @@ class FacebookController < ApplicationController
     @feed = @graph.get_connection('me','feed')
 
     @fb_messages = []
-    @feed.each do |message|
-      if message['message']
-        @fb_messages.push(message['message'])
+    @fb_pictures = []
+
+    @feed.each do |post|
+      if post['message']
+        @fb_messages.push(post['message'])
+      end
+
+      if post['picture']
+        @fb_pictures.push(post['picture'])
       end
     end
+
   end
 
 end
