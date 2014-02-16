@@ -20,7 +20,7 @@
         <input type="text" id='notebook_name'>
         <input type= "submit" value="create">
       </form>
-      <div id="jounal_list">
+      <div id="journal_list">
         <% if @journals %>
           <% @journals.each do |journal| %>
           <p><%=journal.name%> </p>
