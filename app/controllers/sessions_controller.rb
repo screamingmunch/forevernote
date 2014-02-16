@@ -20,8 +20,12 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]
     user = User.find_by_id(current_user.id)
     # binding.pry
-    unless LinkedId.find_by_provider_and_uid(auth["provider"], auth["uid"])
-      linkedid = LinkedId.create(name: user.name, provider: auth.provider, uid: auth.uid, user_id: user.id )
+    if LinkedId.find_by_provider_and_uid(auth.provider, auth.uid)
+
+    elsif auth.credentials
+      linkedid = LinkedId.create(name: user.name, provider: auth.provider, uid: auth.uid, user_id: user.id, token:auth.credentials.token, secret: auth.credentials.secret )
+    else
+      linkedid = LinkedId.create(name: user.name, provider: auth.provider, uid: auth.uid, user_id: user.id)
     end
     redirect_to root_url, :notice => "Access Granted"
   end

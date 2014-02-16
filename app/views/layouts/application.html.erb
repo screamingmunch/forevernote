@@ -14,6 +14,7 @@
         Welcome <%= current_user.name %> !
         <%= link_to "Sign Out", signout_path %>
         <%= link_to "Allow Instragram Access", "/auth/instagram" %>
+        <%= link_to "Allow EverNote Access", "/auth/evernote" %>
 
       <%else%>
         <%= link_to "Sign in: Twitter", "/auth/twitter" %>
