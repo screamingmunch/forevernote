@@ -1,7 +1,6 @@
+
+//function to create the new notebook on the evernote side
 $(function(){
-
-  // alert('jquery')
-
     $( "#new_notebook" ).submit(function(event) {
       // alert( "Handler for .submit() called." );
       event.preventDefault();
@@ -13,16 +12,6 @@ $(function(){
 
           $('#journal_list').append('<p>'+name+'</p>')
           $("#notebook_name").val("");
-
        })
-
-
-
      });
-
-
-
-
-
-
 });
