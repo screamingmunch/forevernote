@@ -32,6 +32,8 @@
                   <li><a href='/home/<%=current_user.id%>'>Go to my Dashboard </a></li>
 
 
+                    <div class= "font-face" style="text-align: center; color: #e7e7e7;">
+
                   <% if current_user.linkedids.where(provider:"instagram").any? %> Instagram Connected
         <% else %> <%= link_to "Allow Instragram Access", "/auth/instagram" %>
         <% end %>
@@ -45,6 +47,7 @@
                   <% if current_user.linkedids.where(provider:"facebook").any? %> Facebook Connected
         <% else %> <%= link_to "Allow Facebook Access", "/auth/facebook" %>
         <% end %>
+         </div>
 
 
                   <li><%= link_to "Sign Out", signout_path %></li>

@@ -12,7 +12,6 @@ $(function(){
         var name = data.name
 
           $('#journal_list').append('<p>'+name+'</p>')
-          debugger
           $("#notebook_name").val("");
 
        })
