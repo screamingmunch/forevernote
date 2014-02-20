@@ -28,9 +28,9 @@ class EvernoteController < ApplicationController
     note.notebookGuid ="af9e2c70-9f7b-4d50-bc4f-925e230ed60c"
     note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
   '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
-  '<en-note>'+'Here is the Evernote logo:' +
+  '<en-note>'+'THIS IS THE NEXT NOTE' +
   '</en-note>'
-    note.tagNames = ["tests"]
+    # note.tagNames = ["tests"]
     created_note = note_store.createNote(note)
     render json: created_note , status:201
 
