@@ -30,7 +30,7 @@ class EvernoteController < ApplicationController
   '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
   '<en-note>'+'THIS IS THE NEXT NOTE' +
   '</en-note>'
-    # note.tagNames = ["tests"]
+
     created_note = note_store.createNote(note)
     render json: created_note , status:201
 
