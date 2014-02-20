@@ -26,6 +26,7 @@ class EvernoteController < ApplicationController
   end
 
   def create_note
+
     note = Evernote::EDAM::Type::Note.new
     note.title = " sdsdfg"
     binding.pry
