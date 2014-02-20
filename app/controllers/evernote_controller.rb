@@ -22,16 +22,20 @@ class EvernoteController < ApplicationController
   end
 
   def create_note
-    note = Evernote::EDAM::Type::Note.new
+    @note = Evernote::EDAM::Type::Note.new
 
-    note.title = "Bryan's Test"
-    note.notebookGuid ="93806f76-a906-40fd-a6f4-0678021b8b89"
-    note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
-  '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
-  '<en-note>'+'THIS IS THE NEXT NOTE' +
-  '</en-note>'
+  #   @note.title = "Bryan's Test"
+  #   @note.notebookGuid ="93806f76-a906-40fd-a6f4-0678021b8b89"
+  #   @note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
+  # '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
+  # '<en-note>'+'THIS IS THE NEXT NOTE' +
+  # '</en-note>'
 
-    created_note = note_store.createNote(note)
+    @note.title = params[:newnote][:title]
+    @note.notebookGuid = params[:newnote][:notebookGuid]
+    @note.content = params[:newnote][:content]
+
+    created_note = note_store.createNote(@note)
     render json: created_note , status:201
 
   end

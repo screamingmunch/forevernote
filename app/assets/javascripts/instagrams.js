@@ -11,8 +11,10 @@ $(function(){
     var hashes = []
 
     $.each(data, function(index,val){
+
        var template_data ={image: val.images.standard_resolution.url}
        hashes.push(template_data)
+
     })
 
     $.each(hashes,function(index,val){
@@ -20,7 +22,8 @@ $(function(){
       $('.instagram').append(content);
     })
 
-}).done(function(results) {
+
+  }).done(function(results) {
     $('.instagram').append('<br><br>');
     $('.instagram').append('<br><input>');
     $('.instagram').append('<br><button id="submitEvernote">Create a new Journal Page.</button>');
