@@ -49,7 +49,8 @@ $(function(){
   $('body').on('click', '#submitEvernote', function(event) {
     event.preventDefault();
     // console.log(resultz);
-    $.post('/evernote_create_note', resultz, function(data){
+    $.post('/evernote_create_note', resultz).done(function(data){
+      debugger
       console.log(data);
     });
     // $.ajax({
