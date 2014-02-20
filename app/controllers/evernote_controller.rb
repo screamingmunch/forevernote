@@ -22,12 +22,14 @@ class EvernoteController < ApplicationController
 
 
     render json: created_notebook, status:201
+
   end
 
   def create_note
     note = Evernote::EDAM::Type::Note.new
-    note.title = " "
-    note.notebookGuid ="16738da5-8c55-4a07-8d31-7e4d3c1a78a0"
+    note.title = " sdsdfg"
+    binding.pry
+    note.notebookGuid ="93806f76-a906-40fd-a6f4-0678021b8b89"
     note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
   '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
   '<en-note>'+'Here is the Evernote logo:' +

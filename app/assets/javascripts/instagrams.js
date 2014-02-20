@@ -1,6 +1,5 @@
-var resultz;
-
 $(function(){
+  var resultz;
   $('body').on('click', '#instagram', function(event){
     event.preventDefault();
     console.log('clicked instagram');
@@ -46,10 +45,20 @@ $(function(){
   })
 
   $('body').on('click', '#submitEvernote', function(event) {
-
+    event.preventDefault();
+    // console.log(resultz);
     $.post('/evernote_create_note', resultz, function(data){
       console.log(data);
     });
+    // $.ajax({
+    //   type: "POST",
+    //   url: ,
+    //   data: {
+
+    //   },
+    //   success: success,
+
+    // })
 
   })
 
