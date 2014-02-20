@@ -34,7 +34,6 @@ class EvernoteController < ApplicationController
     created_note = note_store.createNote(note)
     render json: created_note , status:201
 
-    # render json: {}, status: 201
   end
 
 
