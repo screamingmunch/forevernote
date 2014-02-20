@@ -24,17 +24,14 @@ class EvernoteController < ApplicationController
   def create_note
     note = Evernote::EDAM::Type::Note.new
 
-    note.title = " sdsdfg"
-    note.notebookGuid ="93806f76-a906-40fd-a6f4-0678021b8b89"
+    note.title = "Bryan's Test"
+    note.notebookGuid ="af9e2c70-9f7b-4d50-bc4f-925e230ed60c"
     note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
   '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
   '<en-note>'+'Here is the Evernote logo:' +
   '</en-note>'
     note.tagNames = ["tests"]
-    binding.pry
-
     created_note = note_store.createNote(note)
-
     render json: created_note , status:201
 
   end
