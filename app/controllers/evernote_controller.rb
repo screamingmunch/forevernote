@@ -25,9 +25,11 @@ class EvernoteController < ApplicationController
   end
 
   def create_note
+
     note = Evernote::EDAM::Type::Note.new
+
     note.title = " "
-    note.notebookGuid ="16738da5-8c55-4a07-8d31-7e4d3c1a78a0"
+    note.notebookGuid ="5a88ced4-0542-40d2-a7f9-87e782f5754a"
     note.content = '<?xml version="1.0" encoding="UTF-8"?>' +
   '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">' +
   '<en-note>'+'Here is the Evernote logo:' +
