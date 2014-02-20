@@ -50,7 +50,7 @@ $(function(){
     event.preventDefault();
     // console.log(resultz);
     $.post('/evernote_create_note', resultz).done(function(data){
-      debugger
+
       console.log(data);
     });
     // $.ajax({
