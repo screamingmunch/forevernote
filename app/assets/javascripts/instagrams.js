@@ -1,3 +1,5 @@
+var resultz;
+
 $(function(){
   var resultz;
   $('body').on('click', '#instagram', function(event){

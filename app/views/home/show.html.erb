@@ -15,10 +15,14 @@
   <body class="cbp-spmenu-push">
     <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
       <h3>Menu</h3>
+<<<<<<< HEAD
 
 
       <img src='/assets/notebook.png' alt='notebook'><b style="color:#ffffff;">+New Journal </b>
 
+=======
+      <img src='/assets/notebook.png' alt='notebook'><b style="color:#ffffff;">+New Journal</b>
+>>>>>>> e1b8c7838b450872fb359558daacaaf795a847ec
       <form id = 'new_notebook'>
         <input type="text" id='notebook_name'>
         <input type= "submit" value="create">
@@ -26,10 +30,14 @@
       <div id="journal_list">
         <% if @journals %>
           <% @journals.each do |journal| %>
+<<<<<<< HEAD
 
           <p style="color:#ffffff ; text-align: center;">
           <p><%=journal.name%> </p>
 
+=======
+          <p style="color:#ffffff; text-align:center;"> <%=journal.name%> </p>
+>>>>>>> e1b8c7838b450872fb359558daacaaf795a847ec
           <%end%>
         <%end%>
       </div>
